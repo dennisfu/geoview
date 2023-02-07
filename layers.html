@@ -123,7 +123,7 @@
                 'listOfLayerEntryConfig': [
                   {
                     'layerId': '1',
-                    'layerFilter': 'E_Province = `Alberta` or E_Province = `Manitoba`',
+                    'layerFilter': 'E_Province = \'Alberta\' or E_Province = \'Manitoba\'',
                     'initialSettings': { 'visible': true },
                     'style': {
                       'Point': {
@@ -504,7 +504,7 @@
           'corePackages': [],
           'theme': 'dark',
           'suportedLanguages': ['en']
-        }"></div><div class="layer3-buttons-div"></div><button class="Get-esri-dynamic-Legend">Get Legend</button><div id="esriDynamicLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="esriDynamicResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has an Esri dynamic layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR3CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR4">4. Esri feature layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR4" class="llwp-map" data-lang="en" data-config="{
+        }"></div><div class="layer3-buttons-div"></div><button class="Get-esri-dynamic-Legend">Get Legend</button><div id="esriDynamicLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="esriDynamicResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has an Esri dynamic layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR3CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR4">4. Esri feature layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR4" class="llwp-map" triggerreadycallback="true" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
             'viewSettings': {
@@ -526,7 +526,10 @@
                 },
                 'geoviewLayerType': 'esriFeature',
                 'listOfLayerEntryConfig': [
-                  { 'layerId': '4' }
+                  {
+                    'layerId': '4',
+                    'layerFilter': 'province_territoire like \'British%bi_\' OR province_territoire = \'Ontario\' OR province_territoire = \'Nunavut\''
+                  }
                 ]
               }
             ]
@@ -535,7 +538,7 @@
           'corePackages': [],
           'theme': 'dark',
           'suportedLanguages': ['en']
-        }"></div><button class="Get-esri-feature-Legend">Get Legend</button><div id="esriFeatureLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="esriFeatureResultSetId" class="panel">Click on feature on the map</pre><hr/><button id="LYR4grid-button" type="button" class="collapsible">Get Data Grid</button><pre id="LYR4grid" style="width: 100%" class="panel"></pre><hr/><p>This map has a Esri feature layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR4CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR5">5. GeoJSON Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR5" class="llwp-map" triggerreadycallback="true" data-lang="en" data-config="{
+        }"></div><div class="layer4-buttons-div"></div><button class="Get-esri-feature-Legend">Get Legend</button><div id="esriFeatureLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="esriFeatureResultSetId" class="panel">Click on feature on the map</pre><hr/><button id="LYR4grid-button" type="button" class="collapsible">Get Data Grid</button><pre id="LYR4grid" style="width: 100%" class="panel"></pre><hr/><p>This map has a Esri feature layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR4CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR5">5. GeoJSON Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR5" class="llwp-map" triggerreadycallback="true" data-lang="en" data-config="{
     'map': {
       'interaction': 'dynamic',
       'viewSettings': {
@@ -544,7 +547,7 @@
         'projection': 3978
       },
       'basemapOptions': {
-        'basemapId': 'nogeom',
+        'basemapId': 'transport',
         'shaded': true,
         'labeled': false
       },
@@ -557,7 +560,8 @@
           'listOfLayerEntryConfig': [
             {
               'layerId': 'polygons.json',
-              'layerName': { 'en': 'Polygons' }
+              'layerName': { 'en': 'Polygons' },
+              'layerFilter': '1=1'
             },
             {
               'layerId': 'lines.json',
@@ -586,7 +590,7 @@
     'corePackages': [],
     'theme': 'dark',
     'suportedLanguages': ['en']
-    }"></div><div class="layer5-buttons-div"></div><button class="Get-geojson-Legend">Get Legend</button><div id="geojsonLegendsId-table-div"></div><button id="add-geojson">Add GeoJSON Layer</button><button id="remove-geojson">Remove GeoJSON Layer</button><br/><label>Added Layer ID :</label><label id="new-layer-id-label"></label> <button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="geoJsonResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has one GeoJSON layer added from configuration. and another geoJSON layer can be added/removed by clicking the buttons</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR5CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR6">6. WFS Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR6" class="llwp-map" data-lang="en" data-config="{
+    }"></div><div class="layer5-buttons-div"></div><button class="Get-geojson-Legend">Get Legend</button><div id="geojsonLegendsId-table-div"></div><button id="add-geojson">Add GeoJSON Layer</button><button id="remove-geojson">Remove GeoJSON Layer</button><br/><label>Added Layer ID :</label><label id="new-layer-id-label"></label> <button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="geoJsonResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has one GeoJSON layer added from configuration. and another geoJSON layer can be added/removed by clicking the buttons</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR5CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR6">6. WFS Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR6" class="llwp-map" triggerreadycallback="true" data-lang="en" data-config="{
         'map': {
           'interaction': 'dynamic',
           'viewSettings': {
@@ -611,7 +615,9 @@
               'geoviewLayerType': 'ogcWfs',
               'listOfLayerEntryConfig': [
                 {
-                  'layerId': 'GISDATA.AIRPORTS_PT'
+                  'layerId': 'GISDATA.AIRPORTS_PT',
+                  'layerName': { 'en': 'Airport' },
+                  'layerFilter': 'id in (\'MVY\',\'MA6\',\'MA02\',\'7B2\',\'CEF\')'
                 }
               ]
             }
@@ -621,7 +627,7 @@
         'corePackages': [],
         'theme': 'dark',
         'suportedLanguages': ['en']
-      }"></div><button class="Get-wfs-Legend">Get Legend</button><div id="wfsLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="wfsResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has a WFS layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR6CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR7">7. OGC API Feature Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR7" class="llwp-map" data-lang="en" data-config="{
+      }"></div><div class="layer6-buttons-div"></div><button class="Get-wfs-Legend">Get Legend</button><div id="wfsLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="wfsResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has a WFS layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR6CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR7">7. OGC API Feature Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR7" class="llwp-map" triggerreadycallback="true" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
             'viewSettings': {
@@ -646,7 +652,8 @@
                 'geoviewLayerType': 'ogcFeature',
                 'listOfLayerEntryConfig': [
                   {
-                    'layerId': 'lakes'
+                    'layerId': 'lakes',
+                    'layerFilter': 'name in (\'Lake Victoria\', \'Lake Superior\', \'L. Erie\', \'L. Ontario\')'
                   }
                 ]
               }
@@ -656,7 +663,7 @@
           'corePackages': [],
           'theme': 'dark',
           'suportedLanguages': ['en']
-        }"></div><button class="Get-ogcApi-Legend">Get Legend</button><div id="ogcApiLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="ogcFeatureResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has an OGC API feature layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR7CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR8">8. GeoCore UUID Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR8" class="llwp-map" data-lang="en" data-config="{
+        }"></div><div class="layer7-buttons-div"></div><button class="Get-ogcApi-Legend">Get Legend</button><div id="ogcApiLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="ogcFeatureResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has an OGC API feature layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR7CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR8">8. GeoCore UUID Layer</h4><a class="ref-link" href="#top">Top</a></div><div id="LYR8" class="llwp-map" data-lang="en" data-config="{
           'map': {
             'interaction': 'dynamic',
             'viewSettings': {
@@ -694,7 +701,7 @@
           'corePackages': [],
           'theme': 'dark',
           'suportedLanguages': ['en']
-        }"></div><button class="Get-geocore-Legend">Get Legend</button><div id="geocoreLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="geocoreResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map requests a layer from the catalog using uuid added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR8CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR9">9. GeoPackage Layer</h4><a class="ref-link" href="#top">Top</a></div><hr/><div id="LYR9" class="llwp-map" data-lang="en" data-config="{
+        }"></div><button class="Get-geocore-Legend">Get Legend</button><div id="geocoreLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="geocoreResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map requests a layer from the catalog using uuid added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR8CS" class="panel"></pre><hr/><div class="map-title-holder"><h4 id="HLYR9">9. GeoPackage Layer</h4><a class="ref-link" href="#top">Top</a></div><hr/><div id="LYR9" class="llwp-map" triggerreadycallback="true" data-lang="en" data-config="{
     'map': {
       'interaction': 'dynamic',
       'viewSettings': {
@@ -717,6 +724,7 @@
           'listOfLayerEntryConfig': [
             {
               'layerId': 'rivers.gpkg',
+              'layerName': { 'en': 'Rivers' },
               'source': {
                 'dataAccessPath': {
                   'en': './geojson',
@@ -732,24 +740,24 @@
     'corePackages': [],
     'theme': 'dark',
     'suportedLanguages': ['en']
-  }"></div><button class="Get-Geopackage-Legend">Get Legend</button><div id="geopackageLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="geopackageResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has a GeoPackage feature layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR9CS" class="panel"></pre><hr/><button type="button" class="collapsible">Code Snippet</button><pre id="codeSnippet" class="panel"></pre><script src="codedoc.js"></script><script>// initialize cgpv and api events, a callback is optional, used if calling api's after the rendering is ready
+  }"></div><div class="layer9-buttons-div"></div><button class="Get-Geopackage-Legend">Get Legend</button><div id="geopackageLegendsId-table-div"></div><button type="button" class="collapsible">Get Feature Info</button><pre style="height: 20pc; overflow-y: scroll" id="geopackageResultSetId" class="panel">Click on feature on the map</pre><hr/><p>This map has a GeoPackage feature layer added from configuration.</p><button type="button" class="collapsible">Configuration Snippet</button><pre id="LYR9CS" class="panel"></pre><hr/><button type="button" class="collapsible">Code Snippet</button><pre id="codeSnippet" class="panel"></pre><script src="codedoc.js"></script><script>// initialize cgpv and api events, a callback is optional, used if calling api's after the rendering is ready
       cgpv.init(function (mapId) {
         console.log(`api is ready for ${mapId}`);
 
-        if (mapId === 'LYR3' || mapId === 'LYR5') {
-          var layerButtons = document.getElementsByClassName(`layer${mapId.slice(3)}-buttons-div`)[0];
-          if (mapId === 'LYR3') layerButtons.appendChild(document.createElement('hr'));
-          else {
-            var table = document.createElement('table');
-            table.style.width = '100%';
-            table.border = '1px solid black';
-            layerButtons.appendChild(table);
-            layerButtons = document.createElement('td');
-            layerButtons.style.width = '16.66%';
-            layerButtons.style.padding = '15px';
-            layerButtons.border = '1px solid black';
-            table.appendChild(layerButtons);
-          }
+      if (['LYR3', 'LYR4', 'LYR5', 'LYR6', 'LYR7', 'LYR9'].includes(mapId)) {
+        var layerButtons = document.getElementsByClassName(`layer${mapId.slice(3)}-buttons-div`)[0];
+        if (mapId !== 'LYR5') layerButtons.appendChild(document.createElement("hr"));
+        else {
+          var table = document.createElement("table");
+          table.style.width = '100%';
+          table.border = '1px solid black';
+          layerButtons.appendChild(table);
+          layerButtons = document.createElement("td");
+          layerButtons.style.width = '16.66%';
+          layerButtons.style.padding = '15px';
+          layerButtons.border = '1px solid black';
+          table.appendChild(layerButtons);
+        }
 
           const geoviewLayers = cgpv.api.maps[mapId].layer.geoviewLayers;
           Object.keys(geoviewLayers).forEach((geoviewLayerId) => {
@@ -785,89 +793,139 @@
                 });
                 layerConfigH2.appendChild(toggleLayerVisibility);
 
-                if (layerConfig.style) {
-                  Object.keys(layerConfig.style).forEach((geometry) => {
-                    const geometryText = document.createElement('p');
-                    geometryText.innerText = `Geometry = ${geometry}`;
-                    layerButtons.appendChild(geometryText);
-                    if (layerConfig.style[geometry].styleType === 'uniqueValue') {
-                      const toggleUniqueValueDefault = document.createElement('button');
-                      if (layerConfig.style[geometry].defaultVisible) toggleUniqueValueDefault.innerText = 'Hide default';
-                      else toggleUniqueValueDefault.innerText = 'Show default';
-                      toggleUniqueValueDefault.addEventListener('click', function (e) {
-                        layerConfig.style[geometry].defaultVisible = !layerConfig.style[geometry].defaultVisible;
-                        if (layerConfig.style[geometry].defaultVisible) toggleUniqueValueDefault.innerText = 'Hide default';
-                        else toggleUniqueValueDefault.innerText = 'Show default';
-                        geoviewLayer.applyViewFilter(layerConfig);
-                      });
-                      layerButtons.appendChild(toggleUniqueValueDefault);
-                      if (mapId === 'LYR5') layerButtons.appendChild(document.createElement('p'));
+              if (layerConfig.style) {
+                Object.keys(layerConfig.style).forEach((geometry) => {
+                  const geometryText = document.createElement("p");
+                  geometryText.innerText = `Geometry = ${geometry}`;
+                  layerButtons.appendChild(geometryText);
+                  if (layerConfig.style[geometry].styleType === 'uniqueValue') {
+                    const toggleUniqueValueDefault = document.createElement("button");
+                    if (layerConfig.style[geometry].defaultVisible)
+                      toggleUniqueValueDefault.innerText = `Hide ${layerConfig.style[geometry].defaultLabel}`;
+                    else
+                      toggleUniqueValueDefault.innerText =  `Show ${layerConfig.style[geometry].defaultLabel}`;
+                    toggleUniqueValueDefault.addEventListener('click', function (e) {
+                      layerConfig.style[geometry].defaultVisible = !layerConfig.style[geometry].defaultVisible;
+                      if (layerConfig.style[geometry].defaultVisible)
+                        toggleUniqueValueDefault.innerText = `Hide ${layerConfig.style[geometry].defaultLabel}`;
+                      else
+                        toggleUniqueValueDefault.innerText = `Show ${layerConfig.style[geometry].defaultLabel}`;
+                      const checkbox = document.getElementById(`checkbox-${mapId}`);
+                      const filterInput = document.getElementById(`filter-input-${mapId}`);
+                      const filter = checkbox.value === 'true' ? filterInput.value : '';
+                      geoviewLayer.applyViewFilter(layerConfig, filter);
+                    });
+                    layerButtons.appendChild(toggleUniqueValueDefault);
+                    if (mapId === 'LYR5') layerButtons.appendChild(document.createElement("p"));
 
-                      for (let i = 0; i < layerConfig.style[geometry].uniqueValueStyleInfo.length; i++) {
-                        const toggleUniqueValueFeature = document.createElement('button');
-                        if (layerConfig.style[geometry].uniqueValueStyleInfo[i].visible)
-                          toggleUniqueValueFeature.innerText = `Hide Feature ${i + 1}`;
-                        else toggleUniqueValueFeature.innerText = `Show Feature ${i + 1}`;
-                        toggleUniqueValueFeature.addEventListener('click', function (e) {
-                          const uniqueValueStyleInfoEntry = layerConfig.style[geometry].uniqueValueStyleInfo[i];
-                          uniqueValueStyleInfoEntry.visible = !uniqueValueStyleInfoEntry.visible;
-                          if (uniqueValueStyleInfoEntry.visible) toggleUniqueValueFeature.innerText = `Hide Feature ${i + 1}`;
-                          else toggleUniqueValueFeature.innerText = `Show Feature ${i + 1}`;
-                          geoviewLayer.applyViewFilter(layerConfig);
-                        });
-                        layerButtons.appendChild(toggleUniqueValueFeature);
-                        if (mapId === 'LYR5') layerButtons.appendChild(document.createElement('p'));
-                      }
-                    }
-                    if (layerConfig.style[geometry].styleType === 'classBreaks') {
-                      const toggleClassBreakDefault = document.createElement('button');
-                      if (layerConfig.style[geometry].defaultVisible) toggleClassBreakDefault.innerText = 'Hide default';
-                      else toggleClassBreakDefault.innerText = 'Show default';
-                      toggleClassBreakDefault.addEventListener('click', function (e) {
-                        layerConfig.style[geometry].defaultVisible = !layerConfig.style[geometry].defaultVisible;
-                        if (layerConfig.style[geometry].defaultVisible) toggleClassBreakDefault.innerText = 'Hide default';
-                        else toggleClassBreakDefault.innerText = 'Show default';
-                        geoviewLayer.applyViewFilter(layerConfig);
+                    for (let i = 0; i < layerConfig.style[geometry].uniqueValueStyleInfo.length; i++) {
+                      const toggleUniqueValueFeature = document.createElement("button");
+                      if (layerConfig.style[geometry].uniqueValueStyleInfo[i].visible)
+                        toggleUniqueValueFeature.innerText = `Hide ${layerConfig.style[geometry].uniqueValueStyleInfo[i].label}`;
+                      else
+                        toggleUniqueValueFeature.innerText = `Show ${layerConfig.style[geometry].uniqueValueStyleInfo[i].label}`;
+                      toggleUniqueValueFeature.addEventListener('click', function (e) {
+                        const uniqueValueStyleInfoEntry = layerConfig.style[geometry].uniqueValueStyleInfo[i];
+                        uniqueValueStyleInfoEntry.visible = !uniqueValueStyleInfoEntry.visible;
+                        if (uniqueValueStyleInfoEntry.visible)
+                          toggleUniqueValueFeature.innerText = `Hide ${uniqueValueStyleInfoEntry.label}`;
+                        else
+                          toggleUniqueValueFeature.innerText = `Show ${uniqueValueStyleInfoEntry.label}`;
+                        const checkbox = document.getElementById(`checkbox-${mapId}`);
+                        const filterInput = document.getElementById(`filter-input-${mapId}`);
+                        const filter = checkbox.value === 'true' ? filterInput.value : '';
+                        geoviewLayer.applyViewFilter(layerConfig, filter);
                       });
-                      layerButtons.appendChild(toggleClassBreakDefault);
-
-                      for (let i = 0; i < layerConfig.style[geometry].classBreakStyleInfo.length; i++) {
-                        const toggleClassBreakFeature = document.createElement('button');
-                        if (layerConfig.style[geometry].classBreakStyleInfo[i].visible)
-                          toggleClassBreakFeature.innerText = `Hide Feature ${i + 1}`;
-                        else toggleClassBreakFeature.innerText = `Show Feature ${i + 1}`;
-                        toggleClassBreakFeature.addEventListener('click', function (e) {
-                          const classBreakStyleInfoEntry = layerConfig.style[geometry].classBreakStyleInfo[i];
-                          classBreakStyleInfoEntry.visible = !classBreakStyleInfoEntry.visible;
-                          if (classBreakStyleInfoEntry.visible) toggleClassBreakFeature.innerText = `Hide Feature ${i + 1}`;
-                          else toggleClassBreakFeature.innerText = `Show Feature ${i + 1}`;
-                          geoviewLayer.applyViewFilter(layerConfig);
-                        });
-                        layerButtons.appendChild(toggleClassBreakFeature);
-                      }
+                      layerButtons.appendChild(toggleUniqueValueFeature);
+                      if (mapId === 'LYR5') layerButtons.appendChild(document.createElement("p"));
                     }
-                    if (geoviewLayer.getLayerFilter) {
-                      const layerFilterText = document.createElement('p');
-                      layerFilterText.innerText = `Extra filter: `;
-                      layerButtons.appendChild(layerFilterText);
-                      const layerFilterInput = document.createElement('input');
-                      layerFilterText.appendChild(layerFilterInput);
-                      layerFilterInput.value = geoviewLayer.getLayerFilter(layerConfig) || '';
-                      const layerFilterButton = document.createElement('button');
-                      layerFilterButton.addEventListener('click', function (e) {
+                  } if (layerConfig.style[geometry].styleType === 'classBreaks') {
+                    const toggleClassBreakDefault = document.createElement("button");
+                    if (layerConfig.style[geometry].defaultVisible)
+                      toggleClassBreakDefault.innerText = `Hide ${layerConfig.style[geometry].defaultLabel}`;
+                    else
+                      toggleClassBreakDefault.innerText = `Show ${layerConfig.style[geometry].defaultLabel}`;
+                    toggleClassBreakDefault.addEventListener('click', function (e) {
+                      layerConfig.style[geometry].defaultVisible = !layerConfig.style[geometry].defaultVisible;
+                      if (layerConfig.style[geometry].defaultVisible)
+                        toggleClassBreakDefault.innerText = `Hide ${layerConfig.style[geometry].defaultLabel}`;
+                      else
+                        toggleClassBreakDefault.innerText = `Show ${layerConfig.style[geometry].defaultLabel}`;
+                      const checkbox = document.getElementById(`checkbox-${mapId}`);
+                      const filterInput = document.getElementById(`filter-input-${mapId}`);
+                      const filter = checkbox.value === 'true' ? filterInput.value : '';
+                      geoviewLayer.applyViewFilter(layerConfig, filter);
+                    });
+                    layerButtons.appendChild(toggleClassBreakDefault);
+
+                    for (let i = 0; i < layerConfig.style[geometry].classBreakStyleInfo.length; i++) {
+                      const toggleClassBreakFeature = document.createElement("button");
+                      if (layerConfig.style[geometry].classBreakStyleInfo[i].visible)
+                        toggleClassBreakFeature.innerText = `Hide ${layerConfig.style[geometry].classBreakStyleInfo[i].label}`;
+                      else
+                        toggleClassBreakFeature.innerText = `Show ${layerConfig.style[geometry].classBreakStyleInfo[i].label}`;
+                      toggleClassBreakFeature.addEventListener('click', function (e) {
+                        const classBreakStyleInfoEntry = layerConfig.style[geometry].classBreakStyleInfo[i];
+                        classBreakStyleInfoEntry.visible = !classBreakStyleInfoEntry.visible;
+                        if (classBreakStyleInfoEntry.visible)
+                          toggleClassBreakFeature.innerText = `Hide ${classBreakStyleInfoEntry.label}`;
+                        else
+                          toggleClassBreakFeature.innerText = `Show ${classBreakStyleInfoEntry.label}`;
+                        const checkbox = document.getElementById(`checkbox-${mapId}`);
+                        const filterInput = document.getElementById(`filter-input-${mapId}`);
+                        const filter = checkbox.value === 'true' ? filterInput.value : '';
+                        geoviewLayer.applyViewFilter(layerConfig, filter);
+                      });
+                      layerButtons.appendChild(toggleClassBreakFeature);
+                    }
+                  }
+                  if (geoviewLayer.getLayerFilter) {
+                    const layerFilterText = document.createElement("p");
+                    layerFilterText.innerText = `Extra filter: `;
+                    layerButtons.appendChild(layerFilterText);
+                    const layerFilterInput = document.createElement("input");
+                    layerFilterInput.id = `filter-input-${mapId}`;
+                    layerFilterInput.style.width = '50%';
+                    layerFilterText.appendChild(layerFilterInput);
+                    layerFilterInput.value = geoviewLayer.getLayerFilter(layerConfig) || '';
+                    const layerFilterButton = document.createElement("button");
+                    layerFilterButton.addEventListener('click', function (e) {
+                      const checkbox = document.getElementById(`checkbox-${mapId}`);
+                      if (checkbox.value === 'true')
+                        geoviewLayer.applyViewFilter(layerConfig, layerFilterInput.value);
+                      else {
                         geoviewLayer.setLayerFilter(layerFilterInput.value, layerConfig);
                         geoviewLayer.applyViewFilter(layerConfig);
-                      });
-                      layerFilterButton.innerText = 'Apply';
-                      layerFilterText.appendChild(layerFilterButton);
-                    }
-                    if (mapId === 'LYR3') layerButtons.appendChild(document.createElement('hr'));
-                  });
-                }
+                      }
+                    });
+                    layerFilterButton.innerText = 'Apply';
+                    layerFilterText.appendChild(layerFilterButton);
+
+                    const checkboxInput = document.createElement("input");
+                    checkboxInput.type='checkbox';
+                    checkboxInput.value = 'false';
+                    checkboxInput.id = `checkbox-${mapId}`;
+                    checkboxInput.addEventListener('click', function (e) {
+                      checkboxInput.value =checkboxInput.value === 'true' ? 'false' : 'true';
+                      if (checkboxInput.value === 'true')
+                        geoviewLayer.applyViewFilter(layerConfig, layerFilterInput.value);
+                      else {
+                        geoviewLayer.setLayerFilter(layerFilterInput.value, layerConfig);
+                        geoviewLayer.applyViewFilter(layerConfig);
+                      }
+                    });
+                    layerButtons.appendChild(checkboxInput);
+                    const checkboxText = document.createElement("label");
+                    checkboxText.innerText = `apply only the extra filter`;
+                    layerButtons.appendChild(checkboxText);
+                  }
+                  if (mapId !== 'LYR5') layerButtons.appendChild(document.createElement("hr"));
+                });
               }
-            });
+            }
           });
-        }
+        });
+      }
 
         if (mapId === 'allMaps') {
           //create snippets
