@@ -15,7 +15,7 @@
 <li><a href="../modules.html">geoview-core</a></li>
 <li><a href="TypeSourceVectorClusterConfig.html">TypeSourceVectorClusterConfig</a></li></ul>
 <h1>Type alias TypeSourceVectorClusterConfig</h1></div>
-<div class="tsd-signature">Type<wbr/>Source<wbr/>Vector<wbr/>Cluster<wbr/>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>color<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>distance<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>enable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>minDistance<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>textColor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
+<div class="tsd-signature">Type<wbr/>Source<wbr/>Vector<wbr/>Cluster<wbr/>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>distance<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>enable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>minDistance<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/TypeSimpleSymbolVectorConfig.html" class="tsd-signature-type" data-tsd-kind="Interface">TypeSimpleSymbolVectorConfig</a><span class="tsd-signature-symbol">; </span><br/><span>    </span>textColor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
 <div class="tsd-comment tsd-typography"><hr>
 <p>Type used to configure the cluster feature of a vector layer. Works out of the box with point geometries. If another geometry is
 provided, it will be converted to points geometry.</p>
@@ -23,10 +23,6 @@ provided, it will be converted to points geometry.</p>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
-<li class="tsd-parameter">
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> color<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>Color for the cluster symbol and clustered geometries</p>
-</div></li>
 <li class="tsd-parameter">
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> distance<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 <div class="tsd-comment tsd-typography"><p>Distance in pixels within which features will be clustered together (default 20px).</p>
@@ -42,11 +38,15 @@ guaranteed. This config can be used to avoid overlapping icons. As a tradoff, th
 be the center of all its features.</p>
 </div></li>
 <li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/TypeSimpleSymbolVectorConfig.html" class="tsd-signature-type" data-tsd-kind="Interface">TypeSimpleSymbolVectorConfig</a></h5>
+<div class="tsd-comment tsd-typography"><p>settings for the cluster symbol and clustered geometries</p>
+</div></li>
+<li class="tsd-parameter">
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> text<wbr/>Color<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
 <div class="tsd-comment tsd-typography"><p>Color for the text showing the number of points in a cluster</p>
 </div></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dennisfu/geoview/blob/035b98dab7/packages/geoview-core/src/geo/map/map-schema-types.ts#L55">packages/geoview-core/src/geo/map/map-schema-types.ts:55</a></li></ul></aside></div>
+<li>Defined in <a href="https://github.com/dennisfu/geoview/blob/58c6e2b60b/packages/geoview-core/src/geo/map/map-schema-types.ts#L55">packages/geoview-core/src/geo/map/map-schema-types.ts:55</a></li></ul></aside></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">

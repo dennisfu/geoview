@@ -15,7 +15,7 @@
 <li><a href="../modules.html">geoview-core</a></li>
 <li><a href="TypeStyleRepresentation.html">TypeStyleRepresentation</a></li></ul>
 <h1>Type alias TypeStyleRepresentation</h1></div>
-<div class="tsd-signature">Type<wbr/>Style<wbr/>Representation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>arrayOfCanvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>defaultCanvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
+<div class="tsd-signature">Type<wbr/>Style<wbr/>Representation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>arrayOfCanvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>clusterCanvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>defaultCanvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
@@ -24,12 +24,16 @@
 <div class="tsd-comment tsd-typography"><p>The arrayOfCanvas property is used by unique value and class break styles.</p>
 </div></li>
 <li class="tsd-parameter">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> cluster<wbr/>Canvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+<div class="tsd-comment tsd-typography"><p>The clusterCanvas property is used when the layer clustering is active (layerConfig.source.cluster.enable = true).</p>
+</div></li>
+<li class="tsd-parameter">
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> default<wbr/>Canvas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 <div class="tsd-comment tsd-typography"><p>The defaultCanvas property is used by WMS legends, Simple styles and default styles when defined in unique value and class
 break styles.</p>
 </div></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/dennisfu/geoview/blob/035b98dab7/packages/geoview-core/src/geo/layer/geoview-layers/abstract-geoview-layers.ts#L83">packages/geoview-core/src/geo/layer/geoview-layers/abstract-geoview-layers.ts:83</a></li></ul></aside></div>
+<li>Defined in <a href="https://github.com/dennisfu/geoview/blob/58c6e2b60b/packages/geoview-core/src/geo/layer/geoview-layers/abstract-geoview-layers.ts#L83">packages/geoview-core/src/geo/layer/geoview-layers/abstract-geoview-layers.ts:83</a></li></ul></aside></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
